@@ -29,3 +29,7 @@ Negative path tests were built testing for standard failures
 Tests have detailed logs or reports helping to troubleshoot failures
 Tests can be executed in parallel
 Tests are data driven for maximum coverage
+
+
+NOTES: 
+1. This Typicode API doesn't seemingly create any data. So it's difficult to truly test it at an E2E level. Since the POST endpoint really only fakes creation of data, it's hard to start from a new point and go through with editing and verifying that the new data truly exists.

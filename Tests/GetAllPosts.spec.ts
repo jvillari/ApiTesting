@@ -2,10 +2,7 @@ import axios from 'axios';
 import { Typicode } from '../Utilitites/Typicode';
 import { Verify } from '../Utilitites/Verify';
 
-/**
- * Notes: It doesn't appear that getting all posts returns new ones created via the Post.spec.ts tests
- */
-describe('GET /posts:', () => {
+describe('GET /posts: ', () => {
  
     it('Should return expected contract and response status for all posts', async() => {
 
@@ -20,13 +17,17 @@ describe('GET /posts:', () => {
         }
     })
 
-    it('Should return only data with user ID being 1', async() => {
-        const response = await Typicode.GetPosts('?userId=1');
+    // Data Driven test: Check for each userId
+    it.each([
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    ])
+    (`Should return only data with user ID being %i`, async(userId) => {
+        const response = await Typicode.GetPosts(`?userId=${userId}`);
 
         expect(response.data).not.toHaveLength(0);
 
         for (const resource of response.data) {
-            expect(resource.userId).toBe(1);
+            expect(resource.userId).toBe(userId);
         }
     })
 })
