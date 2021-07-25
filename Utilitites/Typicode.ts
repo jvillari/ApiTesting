@@ -25,7 +25,7 @@ export class Typicode {
         expect(response.data.title).toBe(request.title);
         expect(response.data.body).toBe(request.body);
         expect(response.data.userId).toBe(request.userId);
-        Verify.contract(response.data, APISpec.getPosts)
+        Verify.contract(response.data, APISpec.postPut)
         return new Typicode(response.data);
     }
 
@@ -37,7 +37,7 @@ export class Typicode {
         expect(response.data.title).toBe(request.title);
         expect(response.data.body).toBe(request.body);
         expect(response.data.userId).toBe(request.userId);
-        Verify.contract(response.data, APISpec.getPosts)
+        Verify.contract(response.data, APISpec.postPut)
         return response;
     }
 
