@@ -3,7 +3,7 @@ import { Typicode } from '../Utilitites/Typicode';
 import { Verify } from '../Utilitites/Verify';
 
 /**
- * Notes: It doesn't appear that getting all posts returns new ones cretaed via the Post.spec.ts tests
+ * Notes: It doesn't appear that getting all posts returns new ones created via the Post.spec.ts tests
  */
 describe('GET /posts:', () => {
  
