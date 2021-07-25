@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import APISpec from './TypicodeAPISpec.json';
+import { Verify } from "./Verify";
 
 export class Typicode {
     static BaseApi = 'https://jsonplaceholder.typicode.com';
@@ -24,6 +25,7 @@ export class Typicode {
         expect(response.data.title).toBe(request.title);
         expect(response.data.body).toBe(request.body);
         expect(response.data.userId).toBe(request.userId);
+        Verify.contract(response.data, APISpec.getPosts)
         return new Typicode(response.data);
     }
 
@@ -35,6 +37,7 @@ export class Typicode {
         expect(response.data.title).toBe(request.title);
         expect(response.data.body).toBe(request.body);
         expect(response.data.userId).toBe(request.userId);
+        Verify.contract(response.data, APISpec.getPosts)
         return response;
     }
 
@@ -44,6 +47,7 @@ export class Typicode {
 
         expect(response.status).toBe(200);
         expect(response.data.id).toBe(postId);
+        Verify.contract(response.data, APISpec.getPosts)
         return response;
     }
 }

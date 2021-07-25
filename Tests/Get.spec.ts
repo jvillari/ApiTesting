@@ -9,6 +9,7 @@ describe('GET /post/{postId}', () => {
     ('Should return information based on User=%s', async(user) => {
         const response = await Typicode.Get(user.id);  
 
+        // This will ensure every detail matches the user we are getting
         expect(response.data).toEqual(user);
     })
 })

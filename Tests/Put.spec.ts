@@ -8,8 +8,8 @@ describe('PUT /posts:', () => {
     (`Should return expected contract and response status when updating User=%s`, async(user) =>{
 
         const request: PostOrPutRequest = {
-            title: '',
-            body: user.body,
+            title: `${user.title} Put`,
+            body: `${user.body} Put`,
             userId: user.userId
         }
         const response = await Typicode.Put(request, user.id)
