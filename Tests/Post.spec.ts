@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Typicode } from "../Utilitites/Typicode"
 
-describe('POST /posts:', () => {
+describe('POST /posts: ', () => {
 
     let TypicodePost: Typicode;
     it('Should return expected contract and response status when creating post', async() =>{

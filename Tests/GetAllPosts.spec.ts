@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Typicode } from '../Utilitites/Typicode';
 import { Verify } from '../Utilitites/Verify';
 
-describe('GET /posts:', () => {
+describe('GET /posts: ', () => {
  
     it('Should return expected contract and response status for all posts', async() => {
 

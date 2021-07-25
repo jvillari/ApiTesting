@@ -1,7 +1,7 @@
 import { PostRequest as PostOrPutRequest, Typicode } from "../Utilitites/Typicode"
 import ListOfUserIds from './UserIds.json';
 
-describe('PUT /posts:', () => {
+describe('PUT /posts: ', () => {
     
 
     it.each(ListOfUserIds.ListOfUserIds)
