@@ -10,7 +10,7 @@ module.exports = {
       "includeFailureMsg": true,
       "includeConsoleLog": true,
       "filename": "report.html",
-      "openReport": true
+      //"openReport": true
     }]
   ],
 };
